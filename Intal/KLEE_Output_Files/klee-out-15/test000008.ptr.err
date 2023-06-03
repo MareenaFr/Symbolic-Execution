@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: libc/string/strcpy.c
+Line: 27
+assembly.ll line: 6134
+State: 11317
+Stack: 
+	#000006134 in strcpy(94634266512016, 94634242772632) at libc/string/strcpy.c:27
+	#100002742 in intal_divide(intal1=94634155010304, intal2=94634152957352) at intal.c:467
+	#200002876 in intal_pow(i1=94634159309152, i2=94634159309120) at intal.c:526
+	#300002956 in __user_main(argc=1, argv=94634141417792) at intal.c:589
+	#400000450 in __uClibc_main(94634152956352, 1, 94634141417792, 0, 0, 0, 0) at libc/misc/internals/__uClibc_main.c:401
+	#500000622 in main(1, 94634141417792)
+Info: 
+	address: 94634266512018
+	next: object at 94634130112768 of size 254
+		MO22[254] allocated at main():  call void @__uClibc_main(i32 (i32, i8**, i8**)* bitcast (i32 (i32, i8**)* @__user_main to i32 (i32, i8**, i8**)*), i32 %0, i8** %1, void ()* null, void ()* null, void ()* null, i8* null)

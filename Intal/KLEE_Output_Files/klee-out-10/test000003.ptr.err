@@ -1,0 +1,15 @@
+Error: memory error: out of bound pointer
+File: intal.c
+Line: 35
+assembly.ll line: 2512
+State: 14
+Stack: 
+	#000002512 in convert_to_zero(n=symbolic) at intal.c:35
+	#100002340 in append_zeros(n=94306618179888, l=symbolic) at intal.c:43
+	#200002955 in __user_main(argc=1, argv=94306612568384) at intal.c:572
+	#300000450 in __uClibc_main(94306600260032, 1, 94306612568384, 0, 0, 0, 0) at libc/misc/internals/__uClibc_main.c:401
+	#400000622 in main(1, 94306612568384)
+Info: 
+	address: 0
+	next: object at 94306588986112 of size 254
+		MO22[254] allocated at main():  call void @__uClibc_main(i32 (i32, i8**, i8**)* bitcast (i32 (i32, i8**)* @__user_main to i32 (i32, i8**, i8**)*), i32 %0, i8** %1, void ()* null, void ()* null, void ()* null, i8* null)

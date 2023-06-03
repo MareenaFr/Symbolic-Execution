@@ -1,0 +1,9 @@
+KLEE: Using STP solver backend
+KLEE: ERROR: display.c:234: divide by zero
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: display.c:235: divide by zero
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: display.c:235: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states

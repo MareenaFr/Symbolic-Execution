@@ -1,0 +1,11 @@
+KLEE: Using STP solver backend
+KLEE: ERROR: libc/string/strlen.c:22: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: intal.c:533: free of global
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: intal.c:530: free of global
+KLEE: NOTE: now ignoring this error at this location
+KLEE: ERROR: libc/string/strcpy.c:27: memory error: out of bound pointer
+KLEE: NOTE: now ignoring this error at this location
+KLEE: HaltTimer invoked
+KLEE: halting execution, dumping remaining states

@@ -1,0 +1,23 @@
+klee --libc=uclibc -max-memory=1000 -max-time=30 -only-output-states-covering-new intal.bc
+PID: 11145
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2022-07-22 22:53:40
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2022-07-22 22:54:10
+Elapsed: 00:00:30
+KLEE: done: explored paths = 17251
+KLEE: done: avg. constructs per query = 32
+KLEE: done: total queries = 2979
+KLEE: done: valid queries = 2913
+KLEE: done: invalid queries = 66
+KLEE: done: query cex = 2979
+
+KLEE: done: total instructions = 1237714
+KLEE: done: completed paths = 2686
+KLEE: done: partially completed paths = 14565
+KLEE: done: generated tests = 6

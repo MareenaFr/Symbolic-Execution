@@ -1,0 +1,27 @@
+array arr[10] : w32 -> w8 = symbolic
+array str1[10] : w32 -> w8 = symbolic
+array str2[10] : w32 -> w8 = symbolic
+(query [(Eq 0 (Read w8 9 arr))
+         (Eq 0 (Read w8 0 arr))
+         (Eq 0 (Read w8 9 str1))
+         (Eq 0 (Read w8 0 str1))
+         (Eq 0 (Read w8 9 str2))
+         (Eq false
+             (Eq 0 (Read w8 0 str2)))
+         (Eq false
+             (Eq 0 (Read w8 1 str2)))
+         (Eq false
+             (Eq 0 (Read w8 2 str2)))
+         (Eq false
+             (Eq 0 (Read w8 3 str2)))
+         (Eq false
+             (Eq 0 (Read w8 4 str2)))
+         (Eq false
+             (Eq 0 (Read w8 5 str2)))
+         (Eq false
+             (Eq 0 (Read w8 6 str2)))
+         (Eq false
+             (Eq 0 (Read w8 7 str2)))
+         (Eq false
+             (Eq 0 (Read w8 8 str2)))]
+        false)

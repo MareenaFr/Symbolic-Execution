@@ -1,0 +1,14 @@
+array arr[10] : w32 -> w8 = symbolic
+array str1[10] : w32 -> w8 = symbolic
+array value2[4] : w32 -> w8 = symbolic
+(query [(Eq 0 (Read w8 9 arr))
+         (Eq 0 (Read w8 0 arr))
+         (Eq 0 (Read w8 9 str1))
+         (Eq 0 (Read w8 0 str1))
+         (Eq false
+             (Eq 0
+                 N0:(ReadLSB w32 0 value2)))
+         (Ult 2147483648
+              (SExt w64 (Add w32 1 N0)))
+         (Slt 0 N0)]
+        false)

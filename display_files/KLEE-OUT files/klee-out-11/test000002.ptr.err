@@ -1,0 +1,17 @@
+Error: memory error: out of bound pointer
+File: display.c
+Line: 81
+assembly.ll line: 856
+State: 1
+Stack: 
+	#000000856 in put_pixel(x=symbolic, y=symbolic, c=symbolic) at display.c:81
+	#100001451 in draw_charBG(glyph=94281652991248, x=symbolic, y=symbolic, w=symbolic, h=symbolic, c=symbolic, cb=symbolic) at display.c:160
+	#200002088 in __user_main(argc=1, argv=94281639159040) at display.c:2416
+	#300000459 in __uClibc_main(94281639251864, 1, 94281639159040, 0, 0, 0, 0) at libc/misc/internals/__uClibc_main.c:401
+	#400000631 in main(1, 94281639159040)
+Info: 
+	address: (ZExt w64 (ZExt w32 (ReadLSB w16 0 x7)))
+	example: 0
+	range: [0, 65535]
+	next: object at 94281628110592 of size 254
+		MO22[254] allocated at main():  call void @__uClibc_main(i32 (i32, i8**, i8**)* bitcast (i32 (i32, i8**)* @__user_main to i32 (i32, i8**, i8**)*), i32 %0, i8** %1, void ()* null, void ()* null, void ()* null, i8* null)

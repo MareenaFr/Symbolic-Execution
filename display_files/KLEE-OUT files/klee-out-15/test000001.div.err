@@ -1,0 +1,12 @@
+Error: divide by zero
+File: display.c
+Line: 234
+assembly.ll line: 1829
+State: 4
+Stack: 
+	#000013031 in klee_div_zero_check(symbolic) at klee_src/runtime/Intrinsic/klee_div_zero_check.c:14
+	#100001829 in decdisp(aloc=94236046296640, x=symbolic, y=94236032522368, h=94236032522512, w=94236032522432, offs=94236032522200, c=94236032522416, bg=94236032522312, divider=symbolic, value=symbolic) at display.c:234
+	#200002015 in draw_numbers(x=symbolic, y=symbolic, offs=symbolic, c=symbolic, cb=symbolic, sz=symbolic, divider=symbolic, value=symbolic) at display.c:268
+	#300002086 in __user_main(argc=1, argv=94236032427264) at display.c:2480
+	#400000460 in __uClibc_main(94236032520080, 1, 94236032427264, 0, 0, 0, 0) at libc/misc/internals/__uClibc_main.c:401
+	#500000632 in main(1, 94236032427264)

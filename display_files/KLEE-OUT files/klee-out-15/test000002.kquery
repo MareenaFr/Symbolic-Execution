@@ -1,0 +1,14 @@
+array divider11[4] : w32 -> w8 = symbolic
+array sz11[2] : w32 -> w8 = symbolic
+array value11[4] : w32 -> w8 = symbolic
+(query [(Eq 2
+             (ReadLSB w16 0 sz11))
+         (Eq false
+             (Eq 1
+                 N0:(ReadLSB w32 0 divider11)))
+         (Eq false (Eq 0 N0))
+         (Eq (URem w32 N1:(ReadLSB w32 0 value11)
+                       N0)
+             N1)
+         (Eq 0 (UDiv w32 N0 10))]
+        false)

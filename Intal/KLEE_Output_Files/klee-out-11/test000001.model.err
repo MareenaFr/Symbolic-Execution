@@ -1,0 +1,15 @@
+Error: concretized symbolic size
+File: intal.c
+Line: 54
+assembly.ll line: 2465
+State: 20
+Stack: 
+	#000002465 in shift(str=94020995785008, n=symbolic) at intal.c:54
+	#100002955 in __user_main(argc=1, argv=94020990173504) at intal.c:578
+	#200000450 in __uClibc_main(94020977996224, 1, 94020990173504, 0, 0, 0, 0) at libc/misc/internals/__uClibc_main.c:401
+	#300000622 in main(1, 94020990173504)
+Info: 
+  size expr: (SExt w64 (Add w32 1
+                                 (ReadLSB w32 0 value3)))
+  concretization : 1
+  unbound example: 16843010

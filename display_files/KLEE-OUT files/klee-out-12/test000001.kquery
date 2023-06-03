@@ -1,0 +1,10 @@
+array arr3[10] : w32 -> w8 = symbolic
+array h8[2] : w32 -> w8 = symbolic
+array w8[2] : w32 -> w8 = symbolic
+(query [(Eq 0 (Read w8 9 arr3))
+         (Slt 0
+              (ZExt w32 (ReadLSB w16 0 h8)))
+         (Eq false
+             (Eq 0
+                 (ReadLSB w16 0 w8)))]
+        false)

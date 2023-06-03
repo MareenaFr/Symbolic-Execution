@@ -1,0 +1,14 @@
+Error: free of global
+File: intal.c
+Line: 530
+assembly.ll line: 2887
+State: 977
+Stack: 
+	#000002887 in intal_pow(i1=94634159309152, i2=94634159309120) at intal.c:530
+	#100002956 in __user_main(argc=1, argv=94634141417792) at intal.c:589
+	#200000450 in __uClibc_main(94634152956352, 1, 94634141417792, 0, 0, 0, 0) at libc/misc/internals/__uClibc_main.c:401
+	#300000622 in main(1, 94634141417792)
+Info: 
+	address: 94634152957336
+	next: object at 94634130112768 of size 254
+		MO22[254] allocated at main():  call void @__uClibc_main(i32 (i32, i8**, i8**)* bitcast (i32 (i32, i8**)* @__user_main to i32 (i32, i8**, i8**)*), i32 %0, i8** %1, void ()* null, void ()* null, void ()* null, i8* null)

@@ -1,0 +1,21 @@
+Error: memory error: out of bound pointer
+File: display.c
+Line: 235
+assembly.ll line: 1850
+State: 14
+Stack: 
+	#000001850 in decdisp(aloc=94236046296640, x=symbolic, y=94236032522368, h=94236032522512, w=94236032522432, offs=94236032522200, c=94236032522416, bg=94236032522312, divider=symbolic, value=symbolic) at display.c:235
+	#100002015 in draw_numbers(x=symbolic, y=symbolic, offs=symbolic, c=symbolic, cb=symbolic, sz=symbolic, divider=symbolic, value=symbolic) at display.c:268
+	#200002086 in __user_main(argc=1, argv=94236032427264) at display.c:2480
+	#300000460 in __uClibc_main(94236032520080, 1, 94236032427264, 0, 0, 0, 0) at libc/misc/internals/__uClibc_main.c:401
+	#400000632 in main(1, 94236032427264)
+Info: 
+	address: (Add w64 94236046296640
+          (Mul w64 8
+                   (ZExt w64 (UDiv w32 (ReadLSB w32 0 value11)
+                                       (UDiv w32 (ReadLSB w32 0 divider11)
+                                                 10)))))
+	example: 94236046296720
+	range: [94236046296720, 94236046296784]
+	next: object at 94236021362432 of size 254
+		MO22[254] allocated at main():  call void @__uClibc_main(i32 (i32, i8**, i8**)* bitcast (i32 (i32, i8**)* @__user_main to i32 (i32, i8**, i8**)*), i32 %0, i8** %1, void ()* null, void ()* null, void ()* null, i8* null)

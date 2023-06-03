@@ -1,0 +1,7 @@
+array divider11[4] : w32 -> w8 = symbolic
+array sz11[2] : w32 -> w8 = symbolic
+(query [(Eq 2
+             (ReadLSB w16 0 sz11))
+         (Eq 1
+             (ReadLSB w32 0 divider11))]
+        false)

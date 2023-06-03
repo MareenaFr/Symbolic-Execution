@@ -1,0 +1,39 @@
+array arr[10] : w32 -> w8 = symbolic
+(query [(Eq 0 (Read w8 9 arr))
+         (Eq false
+             (Eq 0 N0:(Read w8 0 arr)))
+         (Eq false
+             (Eq 0 N1:(Read w8 1 arr)))
+         (Eq false
+             (Eq 0 N2:(Read w8 2 arr)))
+         (Eq false
+             (Eq 0 N3:(Read w8 3 arr)))
+         (Eq false
+             (Eq 0 N4:(Read w8 4 arr)))
+         (Eq false
+             (Eq 0 N5:(Read w8 5 arr)))
+         (Eq false
+             (Eq 0 N6:(Read w8 6 arr)))
+         (Eq false
+             (Eq 0 N7:(Read w8 7 arr)))
+         (Eq false
+             (Eq 0 N8:(Read w8 8 arr)))
+         (Sle 48 N9:(SExt w32 N0))
+         (Sle N9 57)
+         (Sle 48 N10:(SExt w32 N1))
+         (Sle N10 57)
+         (Sle 48 N11:(SExt w32 N2))
+         (Sle N11 57)
+         (Sle 48 N12:(SExt w32 N3))
+         (Sle N12 57)
+         (Sle 48 N13:(SExt w32 N4))
+         (Sle N13 57)
+         (Sle 48 N14:(SExt w32 N5))
+         (Sle N14 57)
+         (Sle 48 N15:(SExt w32 N6))
+         (Sle N15 57)
+         (Sle 48 N16:(SExt w32 N7))
+         (Sle N16 57)
+         (Sle 48 N17:(SExt w32 N8))
+         (Sle N17 57)]
+        false)

@@ -1,0 +1,3 @@
+Grade: A+
+
+You've fully met the project specification by using KLEE on three (modestly sized) real programs and finding apparently-live issues. (I'd encourage you to report them to the project maintainers). I would have also liked to see some reflection on what the KLEE result means in terms of overall program correctness.

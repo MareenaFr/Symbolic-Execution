@@ -1,0 +1,17 @@
+Error: memory error: out of bound pointer
+File: libc/string/memcpy.c
+Line: 29
+assembly.ll line: 4377
+State: 1
+Stack: 
+	#000004377 in memcpy(symbolic, 93866538251504, symbolic) at libc/string/memcpy.c:29
+	#100001547 in draw_charAR(glyph=93866538251504, x=symbolic, y=symbolic, w=symbolic, h=symbolic) at display.c:177
+	#200002078 in __user_main(argc=1, argv=93866522543680) at display.c:2427
+	#300000457 in __uClibc_main(93866524544848, 1, 93866522543680, 0, 0, 0, 0) at libc/misc/internals/__uClibc_main.c:401
+	#400000629 in main(1, 93866522543680)
+Info: 
+	address: (ZExt w64 (ZExt w32 (ReadLSB w16 0 x8)))
+	example: 0
+	range: [0, 65535]
+	next: object at 93866513354496 of size 254
+		MO22[254] allocated at main():  call void @__uClibc_main(i32 (i32, i8**, i8**)* bitcast (i32 (i32, i8**)* @__user_main to i32 (i32, i8**, i8**)*), i32 %0, i8** %1, void ()* null, void ()* null, void ()* null, i8* null)
