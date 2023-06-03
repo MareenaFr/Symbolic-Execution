@@ -1,6 +1,4 @@
-# project-smarumug-m22franc-ggirish
-
-Project done as part of the course work --> ECE 653 - Software Testing, Quality Assurance and Maintenance
+# Project done as part of the course work --> ECE 653 - Software Testing, Quality Assurance and Maintenance
 
 Project title - Dynamic Symbolic Execution using KLEE
 
